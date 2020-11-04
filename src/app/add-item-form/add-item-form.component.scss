@@ -1,0 +1,74 @@
+@import "../../variables.scss";
+
+#chart-card {
+  .mat-card {
+    background-color: $light-primary;
+    width: 100%;
+  }
+}
+
+.contact {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.contact-form {
+  display: flex;
+  max-width: 600px;
+  margin: 0, auto;
+  padding: 15px;
+}
+
+.field {
+  width: 100%;
+  padding-right: 15px;
+  border-radius: 10px;
+  color: #2e2e2e;
+}
+
+.button {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: #2e2e2e;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 3px;
+  display: inline-block;
+  border: 2px solid var(--primaryColor);
+  border-radius: 4px;
+  box-sizing: border-box;
+  -moz-appearance: textfield;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid var(--primaryColor);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  background-color: $dark;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: $purple;
+}

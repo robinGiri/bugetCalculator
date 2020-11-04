@@ -13,7 +13,8 @@ import { BudgetItemCardComponent } from './budget-item-list/budget-item-card/bud
 import { EditItemModalComponent } from './edit-item-modal/edit-item-modal.component';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -32,7 +33,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatToolbarModule,
     MatCardModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
