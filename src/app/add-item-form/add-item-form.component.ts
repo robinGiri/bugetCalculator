@@ -14,6 +14,7 @@ export class AddItemFormComponent implements OnInit {
   >();
 
   isNewItem: boolean;
+  selected: string;
 
   constructor() {}
 
@@ -25,11 +26,12 @@ export class AddItemFormComponent implements OnInit {
       this.isNewItem = false;
     } else {
       this.isNewItem = true;
-      this.item = new BudgetItem('', null);
+      this.item = new BudgetItem('', '', null);
     }
   }
 
   onSubmit(form: NgForm) {
+    form.value.type = this.selected;
     this.formSubmit.emit(form.value);
     form.reset();
   }

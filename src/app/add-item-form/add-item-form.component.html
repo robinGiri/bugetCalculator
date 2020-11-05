@@ -34,6 +34,16 @@
         </div>
 
         <div class="field">
+          <p class="selector">
+            <mat-label >Choose an option</mat-label>
+            <mat-select [(value)]="selected" class="input">
+              <mat-option value="debit">Debit</mat-option>
+              <mat-option value="credit">Credit</mat-option>
+            </mat-select>
+          </p>
+        </div>
+
+        <div class="field">
           <button
             type="submit"
             class="button"

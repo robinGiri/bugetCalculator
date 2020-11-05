@@ -17,13 +17,19 @@ export class HomePageComponent implements OnInit {
 
   addItem(newItem: BudgetItem) {
     this.budgetItems.push(newItem);
-    this.totalBudget += newItem.amount;
+    this.totalBudget =
+      newItem.type === 'credit'
+        ? this.totalBudget - newItem.amount
+        : this.totalBudget + newItem.amount;
   }
 
   deleteItem(item: BudgetItem) {
     let index = this.budgetItems.indexOf(item);
     this.budgetItems.splice(index, 1);
-    this.totalBudget -= item.amount;
+    this.totalBudget =
+      item.type === 'credit'
+        ? this.totalBudget + item.amount
+        : this.totalBudget - item.amount;
   }
 
   updateItem(updateEvent: UpdateEvent) {
