@@ -1,41 +1,43 @@
-@import '../../variables.scss';
-
+@import "../../variables.scss";
 
 .toolbar {
-    justify-content: center;
-    text-transform: uppercase;
-    color: $dark;
+  justify-content: center;
+  text-transform: uppercase;
+  background-color: $primary;
 }
 
 .card {
-    padding: 1rem;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  .mat-card {
+    background-color: $secondary;
+    width: 100%;
+  }
 
-    h2 {
-        font-family: 'Lato';
-        font-weight: 300;
-        font-size: 58px;
-        color: white;
+  h2 {
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 58px;
+    color: white;
 
-        &.green {
-            color: lighten($green, 12%);
-        }
-
-        &.red {
-            color: lighten($red, 12%);
-        }
+    &.green {
+      color: lighten($green, 12%);
     }
+
+    &.red {
+      color: lighten($red, 12%);
+    }
+  }
 }
 
 .add-item-section {
-    display: flex;
+  display: flex;
+  padding: 1rem;
+}
 
-    // Horizontally and vertically center the text
-    justify-content: center;
-    align-items: center;
-
-    .add-item-container {
-        width: 680px;
-    }
+.add-item-section {
+  justify-content: center;
+  align-items: center;
 }

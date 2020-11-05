@@ -1,26 +1,35 @@
-<div>
-  <mat-toolbar color="primary" class="toolbar">
-    <span>Budget Calculator</span>
-  </mat-toolbar>
-</div>
-
-<div class="card">
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>Shiba Inu</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <h2 [ngClass]="{ 'red': totalBudget < 0, 'green': totalBudget > 0 }">{{ totalBudget }}</h2>
-    </mat-card-content>
-  </mat-card>
-</div>
-
-<section class="add-item-section">
-  <div class="add-item-container">
-    <app-add-item-form style="padding: 20px;" (formSubmit)="addItem($event)"></app-add-item-form>
+<div class="contaner">
+  <div>
+    <mat-toolbar color="primary" class="toolbar">
+      <span>Budget Calculator</span>
+    </mat-toolbar>
   </div>
-</section>
 
-<hr style="margin-top: 0">
+  <div class="card">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Shiba Inu</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <h2 [ngClass]="{ red: totalBudget < 0, green: totalBudget > 0 }">
+          {{ totalBudget }}
+        </h2>
+      </mat-card-content>
+    </mat-card>
+  </div>
 
-<app-budget-item-list [budgetItems]="budgetItems" (delete)="deleteItem($event)" (update)="updateItem($event)"></app-budget-item-list>
+  <section class="add-item-section">
+    <div class="add-item-container">
+      <app-add-item-form
+        style="padding: 20px"
+        (formSubmit)="addItem($event)"
+      ></app-add-item-form>
+    </div>
+  </section>
+
+  <app-budget-item-list
+    [budgetItems]="budgetItems"
+    (delete)="deleteItem($event)"
+    (update)="updateItem($event)"
+  ></app-budget-item-list>
+</div>

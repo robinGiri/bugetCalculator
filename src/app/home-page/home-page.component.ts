@@ -5,17 +5,15 @@ import { UpdateEvent } from '../budget-item-list/budget-item-list.component';
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.scss']
+  styleUrls: ['./home-page.component.scss'],
 })
 export class HomePageComponent implements OnInit {
-
   budgetItems: BudgetItem[] = new Array<BudgetItem>();
   totalBudget: number = 0;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   addItem(newItem: BudgetItem) {
     this.budgetItems.push(newItem);
@@ -31,11 +29,11 @@ export class HomePageComponent implements OnInit {
   updateItem(updateEvent: UpdateEvent) {
     // result is the update budget item
     // replace the item with the updated/submitted item from the form
-    this.budgetItems[this.budgetItems.indexOf(updateEvent.old)] = updateEvent.new;
+    this.budgetItems[this.budgetItems.indexOf(updateEvent.old)] =
+      updateEvent.new;
 
     // update the total budget
     this.totalBudget -= updateEvent.old.amount;
     this.totalBudget += updateEvent.new.amount;
   }
-
 }
